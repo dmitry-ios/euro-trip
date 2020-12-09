@@ -1,0 +1,138 @@
+.main-nav {
+  display: flex;
+
+  @media (max-width: $tablet-width-only) {
+    position: relative;
+  }
+}
+
+.main-nav__logo {
+  margin-top: 39px;
+  margin-left: 5px;
+  width: 57px;
+  height: 22px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 18px;
+    margin-left: 0;
+    width: 44px;
+    height: 17px;
+  }
+}
+
+.main-nav__logo img {
+  @media (max-width: $tablet-width-only) {
+    width: 44px;
+    height: 17px;
+  }
+}
+
+.main-nav__user-nav {
+  position: relative;
+
+  margin-top: 37px;
+  margin-right: 20px;
+  padding-left: 38px;
+
+  color: $basic-dark-color;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+
+  text-decoration: underline;
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.main-nav__user-nav:focus,
+.main-nav__user-nav:hover {
+  color: $basic-orange-color;
+}
+
+.main-nav__user-nav::before {
+  position: absolute;
+  top: 3px;
+  left: 0;
+
+  width: 30px;
+  height: 30px;
+
+  content: "";
+
+  background-image: url("../img/phone.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 30px 30px;
+}
+
+.main-nav__user-nav:hover::before {
+  background-image: url("../img/phone-orange.svg");
+}
+
+.main-nav__open-button {
+  display: none;
+
+  @media (max-width: $tablet-width-only) {
+    z-index: 20;
+    position: absolute;
+    right: -21px;
+
+    display: block;
+    width: 72px;
+    height: 50px;
+    margin-left: auto;
+
+    background-color: $basic-orange-color;
+    background-image: url("../img/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 30px 30px;
+    border: 0;
+
+    &--closed {
+      background-color: $basic-white-color;
+      background-image: url("../img/close-menu.svg");
+      background-size: 50px 52px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    right: -16px;
+
+    width: 50px;
+  }
+}
+
+.main-nav__open-button:focus,
+.main-nav__open-button:hover {
+  background-color: $basic-hover-orange-color;
+}
+
+.main-nav__open-button--closed:focus,
+.main-nav__open-button--closed:hover {
+  background-color: $basic-white-color;
+}
+
+.main-nav__open-button:active {
+  opacity: 0.7;
+}
+
+.main-nav--no-js {
+  @media (max-width: $tablet-width-only) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .main-nav__list {
+      position: static;
+
+      display: block;
+      width: 100%;
+    }
+
+    .main-nav__open-button {
+      display: none;
+    }
+  }
+}

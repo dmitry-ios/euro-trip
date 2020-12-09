@@ -1,0 +1,195 @@
+.price__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 237px;
+
+  background-color: transparent;
+
+  @media (max-width: $tablet-width-only) {
+    flex-direction: column;
+    padding-top: 105px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 111px;
+  }
+}
+
+.price__info-wrapper {
+  order: 2;
+  padding-top: 113px;
+  width: 299px;
+
+  @media (max-width: $tablet-width-only) {
+    order: 0;
+    padding-top: 0;
+    width: auto;
+
+    text-align: center;
+  }
+}
+
+.price__contacts-wrapper {
+  margin-top: 60px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet-width-only) {
+    margin: 0;
+    margin-top: 32px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 20px;
+  }
+}
+
+.price__title {
+  margin: 0;
+  padding-left: 5px;
+
+  color: $basic-very-dark-color;
+  font-size: 55px;
+  line-height: 90px;
+  font-weight: 600;
+
+  @media (max-width: $tablet-width-only) {
+    padding: 0;
+
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.price__description {
+  position: relative;
+  margin: 0;
+  padding-top: 47px;
+  padding-left: 5px;
+
+  color: $basic-text-dark-color;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: normal;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 13px;
+    padding-left: 0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 20px;
+  }
+}
+
+.price__description::before {
+  position: absolute;
+  top: 14px;
+  left: 4px;
+
+  width: 175px;
+  height: 3px;
+
+  content: "";
+
+  background-color: $basic-orange-color;
+
+  @media (max-width: $tablet-width-only) {
+    background: none;
+  }
+}
+
+.price__info {
+  color: $basic-dark-color;
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 500;
+
+  @media (max-width: $tablet-width-only) {
+    font-size: 18px;
+  }
+}
+
+.price__phone {
+  position: relative;
+  margin-top: 13px;
+
+  color: $basic-black-color;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: normal;
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 10px;
+
+    color: $basic-orange-color;
+    font-size: 18px;
+    line-height: 34px;
+    text-decoration: underline;
+  }
+}
+
+.price__phone:focus,
+.price__phone:hover {
+  color: $basic-orange-color;
+  text-decoration: underline;
+}
+
+.price__phone::before {
+  position: absolute;
+  top: 0;
+  left: -46px;
+
+  width: 30px;
+  height: 30px;
+
+  content: "";
+
+  background-image: url("../img/phone-orange.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (max-width: $tablet-width-only) {
+    background: none;
+  }
+}
+
+.price__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (max-width: $tablet-width-only) {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+    margin-top: 37px;
+  }
+}
+
+.price__item {
+  padding: 30px;
+  padding-top: 30px;
+  width: 310px;
+
+  @media (max-width: $tablet-width-only) {
+    padding: 0;
+    padding-top: 25px;
+    width: 288px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: auto;
+  }
+}

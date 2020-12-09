@@ -1,0 +1,203 @@
+.tariff {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+
+  color: $basic-very-dark-color;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+
+  border: 1px solid $basic-border-dark-color;
+  border-radius: 6px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-right: 50px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.tariff:last-child {
+  @media (max-width: $tablet-width-only) {
+    margin-right: 0;
+  }
+}
+
+.tariff__top {
+  display: flex;
+
+  @media (max-width: $tablet-width-only) {
+    flex-direction: column;
+
+    text-align: center;
+  }
+}
+
+.tariff__title {
+  margin: 0;
+  padding-top: 8px;
+  padding-left: 2px;
+
+  color: $basic-transparent-grey-color;
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 0;
+
+    font-size: 24px;
+    line-height: 38px;
+  }
+}
+
+.tariff__price {
+  margin-left: auto;
+  padding-top: 10px;
+
+  color: $basic-transparent-grey-color;
+  font-size: 25px;
+  line-height: 34px;
+  font-weight: bold;
+
+  @media (max-width: $tablet-width-only) {
+    margin: 0;
+  }
+}
+
+.tariff__list {
+  padding: 0;
+  padding-top: 28px;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: auto;
+
+  line-height: 31px;
+
+  border-top: 1px solid $basic-border-dark-color;
+  list-style: none;
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+
+    line-height: 32px;
+  }
+}
+
+.tariff__button {
+  display: block;
+  margin-top: 35px;
+  padding: 30px 0;
+
+  color: $basic-white-color;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+
+  background-color: $basic-orange-color;
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 30px;
+    padding: 19px 0;
+
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 287px;
+    margin-top: 34px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.tariff__button:focus,
+.tariff__button:hover {
+  background-color: $basic-hover-orange-color;
+}
+
+.tariff:hover {
+  border-color: $basic-orange-color;
+  box-shadow: 0 0 0 2px $basic-orange-color;
+
+  .tariff__title,
+  .tariff__price {
+    color: $basic-orange-color;
+    letter-spacing: 0;
+  }
+
+  .tariff__list {
+    border-color: $basic-orange-color;
+  }
+
+  .tariff__item::before {
+    background-image: url("../img/checkmark-dark.svg");
+  }
+}
+
+.tariff__info {
+  margin: 0;
+  margin-top: 40px;
+  padding-right: 20px;
+  padding-left: 2px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0;
+
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 12px;
+  }
+}
+
+.tariff__item {
+  position: relative;
+
+  padding-bottom: 15px;
+  padding-left: 30px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-bottom: 10px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 8px;
+  }
+}
+
+.tariff__item::before {
+  position: absolute;
+  top: 5px;
+  left: 0;
+
+  width: 22px;
+  height: 22px;
+
+  content: "";
+
+  background-image: url("../img/checkmark-orange.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.tariff__item:last-child {
+  padding-bottom: 0;
+}

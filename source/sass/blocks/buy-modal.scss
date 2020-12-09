@@ -1,0 +1,166 @@
+.buy-modal {
+  position: fixed;
+  top: 50px;
+  left: calc(50% - 728px / 2);
+
+  width: 728px;
+  min-height: 444px;
+
+  background-color: $basic-white-color;
+  background-image: url("../img/modal-background-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 338px 444px;
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/modal-background-desktop@2x.jpg");
+  }
+
+  @media (max-width: $mobile-width-only) {
+    left: 0;
+    right: 0;
+
+    width: auto;
+    min-width: 320px;
+
+    background-image: none;
+  }
+}
+
+.buy-modal__form {
+  position: relative;
+
+  margin-left: 338px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 0;
+  }
+}
+
+.buy-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 22px;
+  height: 22px;
+
+  background-image: url("../img/close-modal-button.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 22px 22px;
+  background-color: transparent;
+  border: 0;
+}
+
+.buy-modal__close:focus,
+.buy-modal__close:hover {
+  opacity: 0.7;
+}
+
+.buy-modal__close:active {
+  opacity: 0.5;
+}
+
+.buy-modal__information {
+  padding-top: 72px;
+
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 43px;
+  text-align: center;
+  color: $basic-text-grey-color;
+}
+
+.buy-modal__input-list {
+  margin: 0;
+  margin-top: 30px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 16px;
+  }
+}
+
+.buy-modal__field {
+  position: relative;
+
+  margin-top: 20px;
+  padding: 0 15px;
+  width: 239px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  border: 1px solid $basic-border-dark-color;
+
+  &--error {
+    border-color: $basic-orange-color;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: auto;
+  }
+}
+
+.buy-modal__field--required::before {
+  position: relative;
+  top: -8px;
+
+  content: "*";
+  color: $basic-orange-color;
+}
+
+.buy-modal__phone-code {
+  padding-left: 5px;
+  padding-right: 7px;
+}
+
+.buy-modal__input {
+  flex-grow: 1;
+
+  color: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  border: 0;
+}
+
+.buy-modal__error-info {
+  position: absolute;
+  top: -20px;
+  left: 0;
+
+  color: $basic-orange-color;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.buy-modal__submit {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0;
+  width: 176px;
+  min-height: 50px;
+
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $basic-white-color;
+
+  background-color: $basic-orange-color;
+  border: 0;
+}
+
+.buy-modal__submit:focus,
+.buy-modal__submit:hover {
+  background-color: $basic-hover-orange-color;
+}

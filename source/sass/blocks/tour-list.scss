@@ -1,0 +1,19 @@
+.tour-list {
+  color: $basic-half-dark-color;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.tour-list__link {
+  color: inherit;
+}
+
+.tour-list__link:focus,
+.tour-list__link:hover {
+  color: $basic-dark-color;
+}
+
+.tour-list__item {
+  margin-bottom: 10px;
+}
