@@ -180,7 +180,7 @@
   width: 705px;
 
   @media (max-width: $tablet-width-only) {
-    width: auto;
+    width: 100%;
     height: 415px;
     margin-top: 30px;
   }
@@ -194,13 +194,12 @@
   @media (max-width: $tablet-width-only) {
     position: absolute;
     top: 0;
-    left: -21px;
-    right: auto;
+    right: -21px;
 
     display: block;
     width: 100vw;
-    height: 100%;
-    max-width: 100vw;
+    height: 415px;
+    max-width: none;
 
     object-fit: cover;
   }
