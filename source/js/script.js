@@ -65,13 +65,13 @@ for (var k = 0; k < tariffButtons.length; ++k) {
 var feedbackPhoneInput = document.querySelector('.feedback__input[name=phone]')
 var feedbackEmailInput = document.querySelector('.feedback__input[name=email]')
 var feedbackPhoneInfo = document.querySelector('.feedback__error-info--phone')
-var feedbackEmailInfo = document.querySelector('.feedback__error--email')
+var feedbackEmailInfo = document.querySelector('.feedback__error-info--email')
 
 var closeModal = modal.querySelector('.buy-modal__close')
 var modalPhoneInput = modal.querySelector('.buy-modal__input[name=phone]')
 var modalEmailInput = modal.querySelector('.buy-modal__input[name=email]')
 var modalPhoneInfo = modal.querySelector('.buy-modal__error-info--phone')
-var modalEmailInfo = modal.querySelector('.buy-modal__error--email')
+var modalEmailInfo = modal.querySelector('.buy-modal__error-info--email')
 var modalSubmit = modal.querySelector('.buy-modal__submit')
 
 closeModal.addEventListener('click', function () {
