@@ -129,6 +129,18 @@
   background-color: $basic-hover-orange-color;
 }
 
+.tariff__marker {
+  position: absolute;
+  top: 10px;
+  left: 0;
+
+  width: 14px;
+  height: 12px;
+
+  stroke: $basic-orange-color;
+  fill: $basic-orange-color;
+}
+
 .tariff:hover {
   border-color: $basic-orange-color;
   box-shadow: 0 0 0 2px $basic-orange-color;
@@ -143,8 +155,9 @@
     border-color: $basic-orange-color;
   }
 
-  .tariff__item::before {
-    background-image: url("../img/checkmark-dark.svg");
+  .tariff__marker {
+    stroke: $basic-dark-color;
+    fill: $basic-dark-color;
   }
 }
 
@@ -181,21 +194,6 @@
   @media (max-width: $mobile-width-only) {
     padding-bottom: 8px;
   }
-}
-
-.tariff__item::before {
-  position: absolute;
-  top: 5px;
-  left: 0;
-
-  width: 22px;
-  height: 22px;
-
-  content: "";
-
-  background-image: url("../img/checkmark-orange.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .tariff__item:last-child {

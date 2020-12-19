@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Путешествие по Европе</title>
-    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
-    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
-    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
-    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
@@ -15,8 +15,10 @@
     <header>
       <div class="container">
         <nav class="main-nav main-nav--no-js">
-          <a class="main-nav__logo">
-            <img src="img/logo.svg" alt="Логотип" width="57" height="22">
+          <a class="main-nav__logo" aria-label="Логотип Way">
+            <svg width="57" height="22" viewBox="0 0 57 22">
+              <use xlink:href="img/sprite-auto.svg#logo"></use>
+            </svg>
           </a>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -26,7 +28,12 @@
               <a class="site-list__link" href="#price">Цены</a>
             </li>
           </ul>
-          <a class="main-nav__user-nav" href="tel:+749978468446">+7 (499) -784-684-46</a>
+          <a class="main-nav__user-nav" href="tel:+749978468446" aria-label="Позвоните нам по телефону +7 (499) 784-684-46">
+            <svg width="30" height="30" viewBox="0 0 30 30">
+              <use xlink:href="img/sprite-auto.svg#icon-phone"></use>
+            </svg>
+            +7 (499) -784-684-46
+          </a>
           <button class="main-nav__open-button" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -302,7 +309,12 @@
             <p class="price__description">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
             <div class="price__contacts-wrapper">
               <b class="price__info">Свяжитесь с нами</b>
-              <a class="price__phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+              <a class="price__phone" href="tel:+749978468446" aria-label="Позвоните нам по телефону +7 (499) 784-684-46">
+                <svg width="30" height="30" viewBox="0 0 30 30">
+                  <use xlink:href="img/sprite-auto.svg#icon-phone"></use>
+                </svg>
+                +7 (499) -784-684-46
+              </a>
             </div>
           </div>
           <ul class="price__list">
@@ -313,10 +325,30 @@
               </div>
               <p class="tariff__info">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
               <ul class="tariff__list">
-                <li class="tariff__item">Разработанный маршрут с гидом группы</li>
-                <li class="tariff__item">Перелет, трансфер и проживание в отелях</li>
-                <li class="tariff__item">Завтраки, ужины в отелях и ланчи на природе</li>
-                <li class="tariff__item">Экскурсии по удивительно красивым местам Европы</li>
+                <li class="tariff__item">
+                  <svg class="tariff__marker" width="14" height="12" viewBox="0 0 14 12" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite-auto.svg#icon-checkmark"></use>
+                  </svg>
+                  Разработанный маршрут с гидом группы
+                </li>
+                <li class="tariff__item">
+                  <svg class="tariff__marker" width="14" height="12" viewBox="0 0 14 12" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite-auto.svg#icon-checkmark"></use>
+                  </svg>
+                  Перелет, трансфер и проживание в отелях
+                </li>
+                <li class="tariff__item">
+                  <svg class="tariff__marker" width="14" height="12" viewBox="0 0 14 12" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite-auto.svg#icon-checkmark"></use>
+                  </svg>
+                  Завтраки, ужины в отелях и ланчи на природе
+                </li>
+                <li class="tariff__item">
+                  <svg class="tariff__marker" width="14" height="12" viewBox="0 0 14 12" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite-auto.svg#icon-checkmark"></use>
+                  </svg>
+                  Экскурсии по удивительно красивым местам Европы
+                </li>
               </ul>
               <a class="tariff__button" href="">Купить тур сейчас</a>
             </li>
@@ -327,11 +359,36 @@
               </div>
               <p class="tariff__info">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
               <ul class="tariff__list">
-                <li class="tariff__item">Разработанный маршрут с гидом группы</li>
-                <li class="tariff__item">Перелет и трансфер</li>
-                <li class="tariff__item">Проживание в хостелах при отелях</li>
-                <li class="tariff__item">Только завтраки в отелях</li>
-                <li class="tariff__item">Экскурсии по удивительно красивым местам Европы</li>
+                <li class="tariff__item">
+                  <svg class="tariff__marker" width="14" height="12" viewBox="0 0 14 12" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite-auto.svg#icon-checkmark"></use>
+                  </svg>
+                  Разработанный маршрут с гидом группы
+                </li>
+                <li class="tariff__item">
+                  <svg class="tariff__marker" width="14" height="12" viewBox="0 0 14 12" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite-auto.svg#icon-checkmark"></use>
+                  </svg>
+                  Перелет и трансфер
+                </li>
+                <li class="tariff__item">
+                  <svg class="tariff__marker" width="14" height="12" viewBox="0 0 14 12" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite-auto.svg#icon-checkmark"></use>
+                  </svg>
+                  Проживание в хостелах при отелях
+                </li>
+                <li class="tariff__item">
+                  <svg class="tariff__marker" width="14" height="12" viewBox="0 0 14 12" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite-auto.svg#icon-checkmark"></use>
+                  </svg>
+                  Только завтраки в отелях
+                </li>
+                <li class="tariff__item">
+                  <svg class="tariff__marker" width="14" height="12" viewBox="0 0 14 12" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite-auto.svg#icon-checkmark"></use>
+                  </svg>
+                  Экскурсии по удивительно красивым местам Европы
+                </li>
               </ul>
               <a class="tariff__button" href="">Купить тур сейчас</a>
             </li>
@@ -429,13 +486,21 @@
             <h2 class="page-footer__title">Наши контакты</h2>
             <ul class="page-footer__contacts contacts">
               <li class="contacts__item contacts__item--mail">
-                <a class="contacts__link" href="mailto:puteshestviemechta@gmail.ru">
+                <a class="contacts__link contacts__link--mail" href="mailto:puteshestviemechta@gmail.ru"  aria-label="Напишите нам на почту puteshestviemechta@gmail.ru">
+                  <svg width="26" height="20" viewBox="0 0 26 20">
+                    <use xlink:href="img/sprite-auto.svg#icon-mail"></use>
+                  </svg>
                   <span class="contacts__link-email">puteshestviemechta@gmail.ru</span>
                   <span class="contacts__link-text">Почта</span>
                 </a>
               </li>
-              <li class="contacts__item contacts__item--phone">
-                <a class="contacts__link contacts__link--big" href="tel:+749978468446">+7 (499) -784-684-46</a>
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--phone contacts__link--big" href="tel:+749978468446" aria-label="Позвоните нам по телефону +7 (499) 784-684-46">
+                  <svg width="30" height="30" viewBox="0 0 30 30">
+                    <use xlink:href="img/sprite-auto.svg#icon-phone"></use>
+                  </svg>
+                  +7 (499) -784-684-46
+                </a>
               </li>
             </ul>
           </div>

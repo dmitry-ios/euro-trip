@@ -12,12 +12,41 @@
 }
 
 .contacts__link {
+  position: relative;
+
   color: inherit;
   text-decoration: underline;
 
   &--big {
     font-size: 16px;
     line-height: 32px;
+  }
+
+  & svg {
+    position: absolute;
+    top: -5px;
+    left: -40px;
+
+    fill: none;
+    stroke: $basic-grey-color;
+
+    @media (max-width: $mobile-width-only) {
+      top: -5px;
+      left: -35px;
+    }
+  }
+
+  &--phone svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  &--mail svg {
+    width: 26px;
+    height: 20px;
+
+    fill: $basic-grey-color;
+    stroke: none;
   }
 }
 
@@ -36,49 +65,10 @@
 }
 
 .contacts__item {
-  position: relative;
-
   margin-bottom: 19px;
   padding-left: 41px;
 
-  &--mail::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 26px;
-    height: 20px;
-
-    content: "";
-
-    background-image: url("../img/mail.svg");
-    background-repeat: no-repeat;
-    background-size: 26px 20px;
-    background-position: 0 0;
-  }
-
-  &--phone::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 30px;
-    height: 30px;
-
-    content: "";
-
-    background-image: url("../img/phone-grey.svg");
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
-    background-position: 0 0;
-  }
-
   @media (max-width: $mobile-width-only) {
     padding-left: 31px;
-
-    &::before {
-      top: -5px;
-      left: -10px;
-    }
   }
 }

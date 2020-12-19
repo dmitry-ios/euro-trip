@@ -141,7 +141,7 @@
   text-decoration: underline;
 }
 
-.price__phone::before {
+.price__phone svg {
   position: absolute;
   top: 0;
   left: -46px;
@@ -151,12 +151,11 @@
 
   content: "";
 
-  background-image: url("../img/phone-orange.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+  stroke: $basic-orange-color;
+  fill: none;
 
   @media (max-width: $tablet-width-only) {
-    background: none;
+    display: none;
   }
 }
 
