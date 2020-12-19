@@ -93,6 +93,7 @@
 
 .feedback__input {
   flex-grow: 1;
+  padding: 0 15px;
 
   color: inherit;
   font-weight: 400;
@@ -100,6 +101,10 @@
   line-height: 17px;
 
   border: 0;
+}
+
+.feedback__input[name="phone"] {
+  padding-left: 50px;
 }
 
 .feedback__error-info {
@@ -161,7 +166,7 @@
   list-style: none;
 
   @media (max-width: $tablet-width-only) {
-    margin-top: 25px;
+    margin-top: 22px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -174,11 +179,9 @@
 .feedback__field {
   position: relative;
 
-  padding: 0 15px;
-  width: 239px;
+  width: 265px;
   height: 50px;
   display: flex;
-  align-items: center;
 
   border: 1px solid $basic-border-dark-color;
 
@@ -193,14 +196,19 @@
 }
 
 .feedback__field--required::before {
-  position: relative;
-  top: -8px;
+  position: absolute;
+  top: 5px;
+  left: 12px;
 
   content: "*";
   color: $basic-orange-color;
 }
 
 .feedback__phone-code {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+
   padding-left: 5px;
   padding-right: 7px;
 }
