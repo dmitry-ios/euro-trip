@@ -55,14 +55,18 @@
     position: relative;
 
     margin: 0;
+    margin-bottom: 30px;
     padding: 17px 0;
     padding-left: 16px;
     padding-right: 35px;
+
+    background-color: $basic-overlay-color;
   }
 }
 
 .site-list__item:last-child {
   margin-right: 0;
+  margin-bottom: 0;
 }
 
 .site-list__item::after {
