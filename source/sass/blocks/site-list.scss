@@ -4,7 +4,9 @@
   margin-top: 43px;
   margin-left: auto;
   margin-right: 54px;
+  padding-left: 25px;
   display: flex;
+  flex-wrap: wrap;
 
   font-weight: 500;
   font-size: 14px;
@@ -22,6 +24,7 @@
 
     display: none;
     margin: 0;
+    padding-left: 0;
     padding-top: 134px;
     min-height: 568px;
 
@@ -50,12 +53,12 @@
 
 .site-list__item {
   margin-right: 40px;
+  margin-bottom: 30px;
 
   @media (max-width: $tablet-width-only) {
     position: relative;
 
     margin: 0;
-    margin-bottom: 30px;
     padding: 17px 0;
     padding-left: 16px;
     padding-right: 35px;
