@@ -227,6 +227,10 @@
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
+
+    &:nth-child(3n) {
+      margin-right: auto;
+    }
   }
 
   @media (max-width: $mobile-width-only) {
